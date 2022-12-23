@@ -6,7 +6,7 @@ const replyMessage = ({
   messages,
 }) => {
   if (config.APP_ENV !== 'production') return { replyToken, messages };
-  return reply({ replyToken, messages });
+  return reply({ replyToken, 'message' });
 };
 
 export default replyMessage;
