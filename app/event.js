@@ -86,7 +86,7 @@ class Event {
     if (this.isMessage && this.isText) {
       const prefixCheck = this.message.text.startsWith('請問');
       if (prefixCheck) {
-        this.message.text = text().split("請問","");
+        this.message.text = this.message.text.split("請問","");
         console.log("是請問開頭 ask = " + this.message.text);
       } else {
         console.log("不是請問開頭，略過"); 
