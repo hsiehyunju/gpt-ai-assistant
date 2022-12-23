@@ -84,7 +84,7 @@ class Event {
 
   isAsk() {
     if (this.isMessage && this.isText) {
-      return this.message.startsWith('請問');
+      return this.message.text.startsWith('請問');
     }
     return false;
   }
