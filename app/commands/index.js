@@ -6,6 +6,7 @@ import { execDeployCommand, isDeployCommand } from './deploy.js';
 import { execDrawCommand, isDrawCommand } from './draw.js';
 import { execSettingsCommand, isSettings } from './settings.js';
 import { execVersionCommand, isVersionCommand } from './version.js';
+import { isAskCommand } from './ask.js'
 
 export {
   execActivateCommand,
@@ -23,4 +24,5 @@ export {
   isDrawCommand,
   isSettings,
   isVersionCommand,
+  isAskCommand,
 };

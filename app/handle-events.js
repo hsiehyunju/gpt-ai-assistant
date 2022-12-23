@@ -17,6 +17,7 @@ import {
   isDrawCommand,
   isSettings,
   isVersionCommand,
+  isAskCommand,
 } from './commands/index.js';
 import Event from './event.js';
 
@@ -25,7 +26,7 @@ import Event from './event.js';
  * @returns {Event}
  */
 const handleEvent = async (event) => (
-  (isSettings(event) && execSettingsCommand(event))
+  isAskCommand(event) && (isSettings(event) && execSettingsCommand(event))
     || (isVersionCommand(event) && execVersionCommand(event))
     || (isDeployCommand(event) && execDeployCommand(event))
     || (isDrawCommand(event) && execDrawCommand(event))

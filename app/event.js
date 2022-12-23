@@ -82,6 +82,13 @@ class Event {
     return false;
   }
 
+  isAsk() {
+    if (this.isMessage && this.isText) {
+      return this.message.startsWith('請問');
+    }
+    return false;
+  }
+
   /**
    * @param {string} text
    * @param {Array<MessageAction>} actions
