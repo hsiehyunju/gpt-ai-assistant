@@ -44,6 +44,7 @@ const handleEvents = async (events = []) => (
         .map((event) => handleEvent(new Event(event))),
     ))
       .filter((event) => event.messages.length > 0)
+      .filter((event) => event.messages.startsWith('請問'))
       .map((event) => replyMessage(event)),
   )
 );
