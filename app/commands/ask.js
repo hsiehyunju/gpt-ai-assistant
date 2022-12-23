@@ -6,17 +6,6 @@ import Event from '../event.js';
  */
 const isAskCommand = (event) => event.isAsk();
 
-/**
- * @param {Event} event
- * @returns {Event}
- */
-const execVersionCommand = async (event) => {
-  const version = getVersion();
-  event.sendText(version);
-  return event;
-};
-
 export {
-  isVersionCommand,
-  execVersionCommand,
+  isAskCommand,
 };
