@@ -84,8 +84,9 @@ class Event {
 
   isAsk() {
     if (this.isMessage && this.isText) {
-      console.log(this.message.text);
-      return this.message.text.startsWith('請問');
+      const prefixCheck = this.message.text.startsWith('請問');
+      console.log(prefixCheck); 
+      return prefixCheck;
     }
     return false;
   }
