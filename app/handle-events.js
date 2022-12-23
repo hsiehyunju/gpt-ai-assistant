@@ -26,7 +26,7 @@ import Event from './event.js';
  * @returns {Event}
  */
 const handleEvent = async (event) => (
-  isAskCommand(event) && (isSettings(event) && execSettingsCommand(event))
+  isAskCommand(event) && ((isSettings(event) && execSettingsCommand(event))
     || (isVersionCommand(event) && execVersionCommand(event))
     || (isDeployCommand(event) && execDeployCommand(event))
     || (isDrawCommand(event) && execDrawCommand(event))
@@ -35,7 +35,7 @@ const handleEvent = async (event) => (
     || (isContinue(event) && execChatCommand(event))
     || (isChatCommand(event) && execChatCommand(event))
     || ((await storage.getItem(SETTING_AI_ACTIVATED) && execChatCommand(event)))
-    || event
+    || event)
 );
 
 const handleEvents = async (events = []) => (
